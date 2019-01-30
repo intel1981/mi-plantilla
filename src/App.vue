@@ -20,9 +20,6 @@
                   {{ item.heading }}
                 </v-subheader>
               </v-flex>
-              <v-flex xs6 class="text-xs-center">
-                <a href="www.google.com" class="body-2 black--text">EDIT</a>
-              </v-flex>
             </v-layout>
             <v-list-group
               v-else-if="item.children"
