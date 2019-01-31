@@ -2,10 +2,9 @@
   <div id="app">
     <v-app id="navigation">
       <v-navigation-drawer
-        fixed
-        :clipped="$vuetify.breakpoint.mdAndUp"
-        app
         v-model="drawer"
+        absolute
+        temporary
       >
         <v-list dense>
           <template v-for="item in items">
@@ -64,12 +63,11 @@
         </v-list>
       </v-navigation-drawer>
       <v-toolbar
-        color="blue darken-3"
-        dark
-        app
-        :clipped-left="$vuetify.breakpoint.mdAndUp"
-        fixed
-      >
+      :clipped-left="$vuetify.breakpoint.lgAndUp"
+      color="blue darken-4"
+      dark
+      app
+      fixed>
         <v-toolbar-title style="width: 300px" class="ml-0 pl-3">
           <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
           <span class="hidden-sm-and-down">Configuración</span>
@@ -83,11 +81,7 @@
         </v-btn>
       </v-toolbar>
       <v-content>
-        <v-container fluid fill-height>
-          <v-layout justify-center align-center>
-            <router-view></router-view>
-          </v-layout>
-        </v-container>
+        <router-view></router-view>
       </v-content>
     </v-app>
   </div>

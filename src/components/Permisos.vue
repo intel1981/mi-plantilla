@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Componente Permisos de Usuario</h1>
-  </div>
+  <v-container fluid fill-height>
+		<v-layout justify-center align-center></v-layout>
+	</v-container>
 </template>
 
 <script>
